@@ -21,8 +21,6 @@
 
 'use strict';
 self.addEventListener('push', function(event) {
-  console.log('[Service Worker] Push Received.');
-  console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
 
   const title = '您收到一条消息';
   const options = {
