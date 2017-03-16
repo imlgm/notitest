@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Todo</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/material.indigo-pink.min.css">
+    <script type='text/javascript' src='http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
+    <script type='text/javascript' src='/scripts/push.js'></script>
+    <script type='text/javascript' src='/scripts/main.js'></script>
+    <link rel='manifest' href='manifest.json' />
+    <script type='text/javascript'>
+        window.vapidPublicKey = urlB64ToUint8Array('<%= publicKey%>')
+        window.serverVapidPublicKey = JSON.parse('<%= decodedVapidPublickKey%>')
+    </script>
+  </head>
+  <body>
+    <section>
+        <p>
+            <span>
+                公钥：<%= publicKey%>
+            </span>
+        </p>
+        <p>
+            <span>
+                私钥：<%= privateKey%>
+            </span>
+        </p>
+        
+        <p>
+            <button>发送消息</button>
+        </p>
+    </section>
+  </body>
+</html>
